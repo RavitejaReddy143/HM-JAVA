@@ -11,7 +11,7 @@ pipeline
             steps
  {
                
-                    sh 'mvn  clean install'
+                    sh 'mvn -f /var/lib/jenkins/workspace/declarativejob/pom.xml  clean install'
                 
             }
         }
