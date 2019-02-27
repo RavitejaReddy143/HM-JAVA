@@ -11,7 +11,7 @@ pipeline
             steps
  {
                
-                    sh 'mvn -f /var/lib/jenkins/workspace/declarativejob/pom.xml  clean install'
+                    sh 'mvn -f pom.xml  clean install'
                 
             }
         }
@@ -30,7 +30,7 @@ pipeline
 {
         steps
  {
-        sh 'cp -R /var/lib/jenkins/workspace/declarativejob/target/* /opt/apache-tomcat-8.5.3/webapps/'
+        sh 'cp -R /root/.jenkins/workspace/declarativejob/target/* /opt/apache-tomcat-8.5.3/webapps/'
         }
         }
 
